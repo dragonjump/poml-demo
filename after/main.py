@@ -16,6 +16,7 @@ headers = {
 }
  
  
+user_input="analyze the stock prices of AAPL in the table and gimme summary." 
 
 system_prompt = poml.poml("input/template.poml",  context=None, chat=True) 
 data = { 
@@ -39,8 +40,8 @@ print("Response Status Code:", response.status_code)
 if response.status_code == 200:
     response_json = response.json()
     output = response_json['choices'][0]['message']['content']
-    print(output)
+    print("printing output...")
     with open("output/result.md", "w", encoding="utf-8") as f:
-        f.write(output)
+        f.write("user_input:"+user_input + "\n" + output)
 else:
     print("Error:", response.status_code, response.text)
