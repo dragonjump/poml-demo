@@ -15,7 +15,10 @@ headers = {
     "Content-Type": "application/json"
 }
  
-# @todo: Replace with your actual system prompt with manual code that loads the image and CSV file, then do parsing manually
+# @todo: Replace with your actual system prompt with
+# 1. lots ofmanual code that loads the image and CSV file
+# 2.then do parsing manually
+# 3. then ensure it doesn't break the code
 SYSTEM_PROMPT = """Long asss prompt here then there is a lso lots of code required to 
 manually load the image and csv file parse it and ensure it doesnt break the code
 """
@@ -28,10 +31,10 @@ data = {
          "top_p": 1,
          "stream": False,
          "stop": None,
-    "messages": [ 
-        {"role": "system", "content": SYSTEM_PROMPT}, 
-        {"role": "user", "content":  "analyze the stock prices of AAPL in the table and gimme summary."}
-    ]
+        "messages": [ 
+            {"role": "system", "content": SYSTEM_PROMPT}, 
+            {"role": "user", "content":  "analyze the stock prices of AAPL in the table and gimme summary."}
+        ]
 }
 
  
