@@ -1,0 +1,12 @@
+Here is how to easily cook a stock analysis app using (Prompt Orchestration Markup Language) POML.
+
+P,o,m,L is like a cheat code for prompt engineering — it keeps your prompts clean, 
+flexible, and lets you add media without tons of manual coding.
+
+
+This is the official  site documentations.
+
+Without the P,o,m,l , i need to write long code to build a prompt query and maintenance will be difficult.
+Here it is after the poml.
+
+Feel free to clone the repo to refer.

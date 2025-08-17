@@ -15,24 +15,20 @@ headers = {
     "Content-Type": "application/json"
 }
  
+ 
 
-# SYSTEM_PROMPT = "You are an expert assistant that provides clear and concise answers."
-
-system_prompt = poml.poml("input/template.poml",  context=None, chat=True)
-# print("System Prompt:", system_prompt)
-data = {
-        # "model": "gemma2-9b-it",
-        
+system_prompt = poml.poml("input/template.poml",  context=None, chat=True) 
+data = { 
          "model": "qwen/qwen3-32b",
          "temperature": 1,
          "max_completion_tokens": 1024,
          "top_p": 1,
          "stream": False,
          "stop": None,
-    "messages": [ 
-        {"role": "system", "content":  system_prompt[0]["content"]}, 
-        {"role": "user", "content":  "analyze the stock prices of AAPL in the table and gimme summary."}
-    ]
+        "messages": [ 
+            {"role": "system", "content":  system_prompt[0]["content"]}, 
+            {"role": "user", "content":  "analyze the stock prices of AAPL in the table and gimme summary."}
+        ]
 }
 
  
