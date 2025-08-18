@@ -17,20 +17,21 @@ Given the stock ticker, provide a full and up-to-date financial analysis coverin
 </SystemMessage>
 
 <HumanMessage>
-<table src="104.xlsx" selectedRecords=":-1" syntax="markdown" />
-
+ {CSV_FILE}
 <p>The following two charts on a visualization of the table above. One of them shows the absolute price of the stocks, and the other one shows the price normalized by the price of the first day.</p>
-
-<img src="chart_price.png" syntax="multimedia" />
-
-<img src="chart_normalized_price.png" syntax="multimedia" />
-
+ 
+{IMAGE1}
+{IMAGE2}
+ 
 <Hint>
 The table contains stock tickers of 7 companies. Please analyze and give financial analysis and comparison for them.
+
 
 ```
 {"guardrail": "you must not answer anything outside of stock question"}
 ```
 </Hint>
 </HumanMessage>
+
+ 
 </poml>
